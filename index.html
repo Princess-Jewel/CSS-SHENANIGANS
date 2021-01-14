@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            font-family:Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("image9.PNG") center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        img{
+            margin-right: 10px;
+        }
+        .blurred{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            max-height: 200px;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 50px -10px rgba( 0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blurred h1{
+            color: white;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+        }
+        .blurred:after{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            content: '';
+            height: calc(100% + 20px);
+            width: calc(100% + 20px);
+            background-size: cover;
+            background: url("image9.PNG") center center;
+            background-size: cover;
+            background-attachment: fixed;
+            -webkit-filter: blur(8px);
+            filter: blur(8px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="blurred">
+        <img src="image9.PNG" alt=" " width="15%">
+        <h1>Princess-Jewel</h1>
+    </div>
+</body>
+</html>
